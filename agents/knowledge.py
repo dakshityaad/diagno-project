@@ -15,6 +15,7 @@ class KnowledgeAgent:
             prompt = (
                 "answer in para graph no bold texts"
                 "try to answer in points"
+                "give a short consise summary in about 4 sentences not more than that"
                 "You are a medical genius your know everything about medical science and issues. "
                 "Give a possible explanation of what condition it could be, "
                 "tell facts, suggest simple remedies.\n\n"

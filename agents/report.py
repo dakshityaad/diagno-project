@@ -18,6 +18,7 @@ class ReportAgent:
         try:
             prompt = (
                 "You are a helpful medical assistant. "
+                "give a short consise summary in about 4 sentences not more than that"
                 "Interpret the following lab report or health-related text in simple terms like first start with the basic info and then change the paragraphs to bullet points. "
                 "Be clear and patient. "
                 "Always add a note that the user should consult a real doctor for confirmation.\n\n"

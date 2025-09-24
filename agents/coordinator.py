@@ -145,7 +145,7 @@ class CoordinatorAgent:
             return self.report_agent.respond(message)
 
         
-        knowledge_keywords = ["how","why","you","i","know","what","how","explain", "what is", "knowledge", "info", "information", "tell", "meaning of"]
+        knowledge_keywords = ["how","why","you","know","what","how","explain", "what is", "knowledge", "info", "information", "tell", "meaning of"]
         if any(word in msg for word in knowledge_keywords):
             return self.knowledge_agent.respond(message)
 

@@ -41,12 +41,20 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Handle file upload
+  // Handle file upload
   fileUpload.addEventListener("change", async () => {
     const file = fileUpload.files[0];
     if (!file) return;
 
-    addMessage(`📎 Uploaded: ${file.name}`, "user");
+  // Show uploaded file in chat (with clickable link)
+    const fileUrl = URL.createObjectURL(file);
+    const fileMsgDiv = document.createElement("div");
+    fileMsgDiv.classList.add("message", "user");
+    fileMsgDiv.innerHTML = `📎 <a href="${fileUrl}" target="_blank">${file.name}</a>`;
+    chatContainer.appendChild(fileMsgDiv);
+    chatContainer.scrollTop = chatContainer.scrollHeight;
 
+  // Send file to backend
     const formData = new FormData();
     formData.append("file", file);
 
@@ -56,8 +64,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const data = await response.json();
+
+  // Show bot reply
     addMessage(data.reply, "bot");
   });
+
 
   // 🎤 Handle mic with Web Speech API
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;

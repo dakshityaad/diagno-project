@@ -16,6 +16,7 @@ class SymptomAgent:
                 "answer in para graph no bold texts"
                 "try to answer in points"
                 "You are a medical assistant. "
+                "give a short consise summary in about 4 sentences not more than that"
                 "The user is describing their symptoms. "
                 "Give a possible explanation of what condition it could be, "
                 "suggest simple remedies, and advise consulting a doctor if serious.\n\n"
