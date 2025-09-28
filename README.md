@@ -11,4 +11,3 @@ Diango is an **agentic AI chatbot** built with **Flask + Gemini API** that:
 - Modular multi-agent design
 - Frontend (HTML/JS) + Flask backend
 
-## 📂 Project Structure
